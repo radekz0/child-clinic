@@ -4,11 +4,8 @@ import com.spring.childclinic.model.Doctor;
 import com.spring.childclinic.model.Parent;
 import com.spring.childclinic.service.DoctorService;
 import com.spring.childclinic.service.ParentService;
-import com.spring.childclinic.service.map.DoctorMapService;
-import com.spring.childclinic.service.map.ParentMapService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-
 
 @Component
 public class DataInitializer implements CommandLineRunner {
@@ -16,9 +13,9 @@ public class DataInitializer implements CommandLineRunner {
     private final ParentService parentService;
     private final DoctorService doctorService;
 
-    public DataInitializer() {
-        parentService = new ParentMapService();
-        doctorService = new DoctorMapService();
+    public DataInitializer(ParentService parentService, DoctorService doctorService) {
+        this.parentService = parentService;
+        this.doctorService = doctorService;
     }
 
     @Override
@@ -51,6 +48,5 @@ public class DataInitializer implements CommandLineRunner {
         doctor2.setLastName("Cierniak");
 
         doctorService.save(doctor2);
-
     }
 }

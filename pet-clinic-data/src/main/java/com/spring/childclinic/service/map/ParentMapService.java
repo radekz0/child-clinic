@@ -3,9 +3,11 @@ package com.spring.childclinic.service.map;
 import com.spring.childclinic.model.Parent;
 import com.spring.childclinic.service.CrudService;
 import com.spring.childclinic.service.ParentService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class ParentMapService extends AbstractMapService<Parent, Long> implements ParentService{
 
     @Override
