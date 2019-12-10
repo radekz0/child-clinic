@@ -2,10 +2,11 @@ package com.spring.childclinic.service.map;
 
 import com.spring.childclinic.model.Parent;
 import com.spring.childclinic.service.CrudService;
+import com.spring.childclinic.service.ParentService;
 
 import java.util.Set;
 
-public class ParentMapService extends AbstractMapService<Parent, Long> implements CrudService<Parent, Long> {
+public class ParentMapService extends AbstractMapService<Parent, Long> implements ParentService{
 
     @Override
     public Set<Parent> findAll() {
@@ -30,5 +31,10 @@ public class ParentMapService extends AbstractMapService<Parent, Long> implement
     @Override
     public Parent findById(Long id) {
         return super.findById(id);
+    }
+
+    @Override
+    public Parent findByLastName(String lastName) {
+        return null;
     }
 }
