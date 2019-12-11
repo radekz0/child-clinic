@@ -1,4 +1,4 @@
-package com.spring.petclinic.bootstrap;
+package com.spring.childclinic.bootstrap;
 
 import com.spring.childclinic.model.Doctor;
 import com.spring.childclinic.model.Parent;
