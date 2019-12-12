@@ -27,7 +27,7 @@ public class ParentMapService extends AbstractMapService<Parent, Long> implement
 
     @Override
     public Parent save(Parent object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

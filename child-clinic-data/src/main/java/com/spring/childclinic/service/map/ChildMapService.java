@@ -18,7 +18,6 @@ public class ChildMapService extends AbstractMapService<Child, Long> implements 
         super.deleteById(id);
     }
 
-
     @Override
     public void delete(Child object) {
         super.delete(object);
@@ -26,7 +25,7 @@ public class ChildMapService extends AbstractMapService<Child, Long> implements 
 
     @Override
     public Child save(Child object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

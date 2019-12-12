@@ -18,6 +18,7 @@ public class DoctorController {
 
     @GetMapping
     public String listDoctors(Model model){
+        System.out.println("Inside doctor controller");
         model.addAttribute("doctors",doctorService.findAll());
         return "doctors/index";
     }

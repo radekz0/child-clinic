@@ -4,6 +4,7 @@ import com.spring.childclinic.model.Doctor;
 import com.spring.childclinic.service.DoctorService;
 import org.springframework.stereotype.Service;
 
+import java.util.Collections;
 import java.util.Set;
 
 @Service
@@ -25,11 +26,12 @@ public class DoctorMapService extends AbstractMapService<Doctor, Long> implement
 
     @Override
     public Doctor save(Doctor object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
     public Doctor findById(Long id) {
         return super.findById(id);
     }
+
 }
