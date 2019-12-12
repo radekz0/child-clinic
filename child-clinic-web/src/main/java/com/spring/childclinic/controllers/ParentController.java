@@ -18,8 +18,6 @@ public class ParentController {
 
     public ParentController(ParentService parentService) {
         logger.info("logger Inside controller constructor-----------------------------------------------------------------------");
-        logger.debug("debugging the controller constructor");
-        System.out.println("Inside controller constructor---------------------------------------------------------------");
         this.parentService = parentService;
     }
 

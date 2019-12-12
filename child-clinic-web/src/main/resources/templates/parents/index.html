@@ -1,11 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>List of Parents</title>
 </head>
 <body>
-    <h1>List of Parents</h1>
-adsasd
+<h1>List of Parents</h1>
+
+<table>
+    <tr>
+        <th>id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+
+    <tr th:each="parent:${parents}">
+        <td th:text="${parent?.id}"></td>
+        <td th:text="${parent?.firstName}"></td>
+        <td th:text="${parent?.lastName}"></td>
+    </tr>
+</table>
 </body>
 </html>
