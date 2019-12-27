@@ -4,4 +4,6 @@ import com.spring.childclinic.model.Parent;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ParentRepository extends CrudRepository<Parent, Long> {
+
+    Parent findByLastName(String lastName);
 }
