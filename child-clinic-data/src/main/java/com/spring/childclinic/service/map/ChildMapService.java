@@ -32,4 +32,9 @@ public class ChildMapService extends AbstractMapService<Child, Long> implements 
     public Child findById(Long id) {
         return super.findById(id);
     }
+
+    @Override
+    public Child findByLastName(String lastName) {
+        return null;
+    }
 }

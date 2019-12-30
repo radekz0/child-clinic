@@ -34,4 +34,8 @@ public class DoctorMapService extends AbstractMapService<Doctor, Long> implement
         return super.findById(id);
     }
 
+    @Override
+    public Doctor findByLastName(String lastName) {
+        return null;
+    }
 }
