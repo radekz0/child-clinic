@@ -40,7 +40,6 @@ class AppointmentJpaServiceTest {
         returnAppointment.setDescription(DESCRIPTION);
     }
 
-
     @Test
     void findAll() {
         Set<Appointment> returnAppointmentSet = new HashSet<>();
