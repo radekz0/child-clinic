@@ -4,10 +4,12 @@ import com.spring.childclinic.model.Child;
 import com.spring.childclinic.model.Doctor;
 import com.spring.childclinic.model.Parent;
 import com.spring.childclinic.model.Speciality;
+import com.spring.childclinic.model.security.User;
 import com.spring.childclinic.service.ChildService;
 import com.spring.childclinic.service.DoctorService;
 import com.spring.childclinic.service.ParentService;
 import com.spring.childclinic.service.SpecialityService;
+import com.spring.childclinic.service.security.UserService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -20,12 +22,14 @@ public class DataInitializer implements CommandLineRunner {
     private final DoctorService doctorService;
     private final ChildService childService;
     private final SpecialityService specialityService;
+    private final UserService userService;
 
-    public DataInitializer(ParentService parentService, DoctorService doctorService, ChildService childService, SpecialityService specialityService) {
+    public DataInitializer(ParentService parentService, DoctorService doctorService, ChildService childService, SpecialityService specialityService, UserService userService) {
         this.parentService = parentService;
         this.doctorService = doctorService;
         this.childService = childService;
         this.specialityService = specialityService;
+        this.userService = userService;
     }
 
     @Override
@@ -35,6 +39,11 @@ public class DataInitializer implements CommandLineRunner {
     }
 
     private void loadData() {
+        User user = new User();
+        user.setUsername("admin");
+        user.setPassword("admin");
+        userService.save(user);
+
         Parent parent1 = new Parent();
         parent1.setFirstName("Artur");
         parent1.setLastName("Zielinski");

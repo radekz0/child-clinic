@@ -24,7 +24,6 @@ public class ParentController {
     @GetMapping
     public String listParents(Model model){
         model.addAttribute("parents", parentService.findAll());
-        System.out.println("inside parent controller");
         return "parents/index";
     }
 }
