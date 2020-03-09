@@ -82,5 +82,6 @@
                 <version>2.22.0</version>
             </plugin>
         </plugins>
+        <finalName>child-clinic-data</finalName>
     </build>
 </project>
